@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Google Maps API ver 3 Sample/グーグルマップAPIサンプル/Google Maps API样品</title>
+<link rel="stylesheet" href="css/main.css" type="text/css" media="all">
+<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+</head>
+<body>
+<div id="gmap"></div>
+<script type="text/javascript">
+var map = new google.maps.Map(
+document.getElementById("gmap"),{
+zoom : 11,
+center : new google.maps.LatLng(36.050764426908515, 138.0823516845703),
+mapTypeId : google.maps.MapTypeId.ROADMAP
+}
+);
+map.data.loadGeoJson("./GeoJson_temp.json");
+</script>
+</body>
+</html> 
